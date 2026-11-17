@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StreamSales Bolivia - TikTok Live Shopping</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>StreamSales Bolivia</h1>
+    <span class="live-badge">● EN VIVO en TikTok</span>
+  </header>
+
+  <main class="layout">
+    <!-- DÍA 1: contenedor con delegación de eventos -->
+    <section id="liveContainer" class="stream-box">
+      <div id="videoArea" class="video-area" title="Doble clic para enviar un like">
+        <p class="video-title">Descuentos relámpago de tecnología</p>
+        <p class="video-hint">Haz doble clic aquí para enviar corazones</p>
+        <span id="likeCount" class="like-count">❤️ 0</span>
+      </div>
+
+      <div id="offers" class="offers">
+        <article class="offer">
+          <h3>Auriculares Gamer</h3>
+          <p class="price">50 BOB <s>100 BOB</s></p>
+          <button class="btn-oferta" data-prod="Auriculares Gamer 50% OFF">Comprar auriculares</button>
+        </article>
+        <article class="offer">
+          <h3>Mouse RGB</h3>
+          <p class="price">35 BOB <s>60 BOB</s></p>
+          <button class="btn-oferta" data-prod="Mouse RGB 40% OFF">Comprar mouse</button>
+        </article>
+        <article class="offer">
+          <h3>Teclado Mecánico</h3>
+          <p class="price">120 BOB <s>200 BOB</s></p>
+          <button class="btn-oferta" data-prod="Teclado Mecánico 40% OFF">Comprar teclado</button>
+        </article>
+      </div>
+
+      <div class="actions">
+        <button class="btn-oferta btn-like" data-action="like">❤️ Dar like al Live</button>
+        <button class="btn-oferta btn-nueva" data-action="nueva-oferta">⚡ Lanzar oferta nueva</button>
+      </div>
+      <p class="cart">🛒 Carrito: <strong id="cartCount">0</strong> producto(s)</p>
+    </section>
+
+    <aside class="side">
+      <h2>💬 Chat del Live</h2>
+      <input type="text" id="chatInput" placeholder="Pregunta al vendedor en directo..." autocomplete="off">
+
+      <h2>📊 Bitácora del Stream (Día 1)</h2>
+      <div id="logOutput" class="log log-stream"><div>[Transmisión iniciada] Escuchando interacciones...</div></div>
+    </aside>
+
+    <!-- DÍA 2: checkout rápido -->
+    <section class="checkout">
+      <h2>⚡ Checkout rápido</h2>
+      <form id="orderForm">
+        <label for="variantSelect">Variante del producto</label>
+        <select id="variantSelect">
+          <option value="Kit Básico (1 und)">Kit Básico (1 und) - 50 BOB</option>
+          <option value="Combo Doble (2 und)">Combo Doble (2 und) - 80 BOB</option>
+          <option value="Combo Gamer (3 und)">Combo Gamer (3 und) - 110 BOB</option>
+        </select>
+
+        <label for="userTikTok">Usuario de TikTok</label>
+        <input type="text" id="userTikTok" placeholder="@usuario_live" required>
+
+        <button type="submit" class="btn-order">Confirmar compra en directo</button>
+      </form>
+
+      <h2>📋 Bitácora de transacciones (Día 2)</h2>
+      <div id="logDia2" class="log log-dia2"><div>[Sistema] Esperando pedidos del Live...</div></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
